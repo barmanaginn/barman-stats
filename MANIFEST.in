@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include barman_stats/templates *
+recursive-include barman_stats/static *

@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block entete %}{% trans "Statistics" %}{% endblock %}
+{% block navbar%}
+<ul>
+	<li><a href="#first">{% trans "Statistics" %}</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<section id="first" class="main">
+	<header class="major">
+		<h2>{% trans "Statistics" %}</h2>
+	</header>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th>{% trans "Description" %}</th>
+					<th>{% trans "Value" %}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{% trans "Number of members" %}</td>
+					<td>{{adherents|length}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of accounts" %}</td>
+					<td>{{users.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of archived accounts" %}</td>
+					<td>{{nb_archived_accounts}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of transactions" %}</td>
+					<td>{{nb_consumptions|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of transactions" %}</td>
+					<td>{{total_consumptions|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of transactions during last week" %}</td>
+					<td>{{nb_consumptions_week|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of transactions during last week" %}</td>
+					<td>{{total_consumptions_week|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of transactions during last month" %}</td>
+					<td>{{nb_consumptions_month|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of transactions during last month" %}</td>
+					<td>{{total_consumptions_month|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of transactions during last year" %}</td>
+					<td>{{nb_consumptions_year|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of transactions during last year" %}</td>
+					<td>{{total_consumptions_year|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of reloads" %}</td>
+					<td>{{nb_reloads|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of reloads" %}</td>
+					<td>{{total_refunds|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of refunds" %}</td>
+					<td>{{nb_refunds|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Total of refunds" %}</td>
+					<td>{{total_refunds|default:0}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Sum of balances" %}</td>
+					<td>{{sum_balance}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Best buyer" %}</td>
+					<td><a href="{% url 'users:profile' best_buyer.pk %}">{{best_buyer.username}}</a>
+						({{best_buyer.profile.total_debit}})</td>
+				</tr>
+				<tr>
+					<td>{% trans "Best product" %}</td>
+					<td>{{best_product.1.name}} ({{best_product.0}})</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of schools" %}</td>
+					<td>{{schools.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of groups" %}</td>
+					<td>{{groups.count}}</td>
+				</tr>
+				{% for group in groups %}
+				<tr>
+					<td>{% blocktrans %}Number of people in the group {{group}}{% endblocktrans %}</td>
+					<td>{{group.user_set.count}}</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td>{% trans "Number of admins" %}</td>
+					<td>{{admins.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of superusers" %}</td>
+					<td>{{superusers.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of quotes" %}</td>
+					<td>{{nb_quotes}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of categories" %}</td>
+					<td>{{categories.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of shown categories" %}</td>
+					<td>{{categories_shown.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of products" %}</td>
+					<td>{{products.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of active products" %}</td>
+					<td>{{active_products.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of active kegs" %}</td>
+					<td>{{active_kegs.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of menus" %}</td>
+					<td>{{menus.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of payment methods" %}</td>
+					<td>{{payment_methods.count}}</td>
+				</tr>
+				<tr>
+					<td>{% trans "Number of contributions types" %}</td>
+					<td>{{contributions.count}}</td>
+				</tr>
+				{% for contribution in contributions %}
+				<tr>
+					<td>{% blocktrans %}Number of {{contribution}}{% endblocktrans %}</td>
+					<td>{{contribution.cotisationhistory_set.count}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</section>
+{% endblock %}

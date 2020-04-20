@@ -1,0 +1,186 @@
+# barman-stats - plugin for barman
+# Copyright © 2020 Yoann Pietri <me@nanoy.fr>
+#
+# barman-stats is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# barman-stats is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with barman-stats.  If not, see <https://www.gnu.org/licenses/>.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: barman-stats 0.1 \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-20 21:36+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoann Pietri <me@nanoy.fr>\n"
+"Language-Team: \n"
+"Language: French \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: barman_stats/__init__.py:29
+msgid "Add some stats to BarMan"
+msgstr "Ajoute des statistiques à BarMan"
+
+#: barman_stats/__init__.py:36
+msgid "Stats"
+msgstr "Stats"
+
+#: barman_stats/templates/barman_stats/stats.html:3
+#: barman_stats/templates/barman_stats/stats.html:6
+#: barman_stats/templates/barman_stats/stats.html:12
+msgid "Statistics"
+msgstr "Statistiques"
+
+#: barman_stats/templates/barman_stats/stats.html:18
+msgid "Description"
+msgstr "Description"
+
+#: barman_stats/templates/barman_stats/stats.html:19
+msgid "Value"
+msgstr "Valeur"
+
+#: barman_stats/templates/barman_stats/stats.html:24
+msgid "Number of members"
+msgstr "Nombre de membres"
+
+#: barman_stats/templates/barman_stats/stats.html:28
+msgid "Number of accounts"
+msgstr "Nombre de comptes"
+
+#: barman_stats/templates/barman_stats/stats.html:32
+msgid "Number of archived accounts"
+msgstr "Nombre de comptes archivés"
+
+#: barman_stats/templates/barman_stats/stats.html:36
+msgid "Number of transactions"
+msgstr "Nombre de transactions"
+
+#: barman_stats/templates/barman_stats/stats.html:40
+msgid "Total of transactions"
+msgstr "Total des transactions"
+
+#: barman_stats/templates/barman_stats/stats.html:44
+msgid "Number of transactions during last week"
+msgstr "Nombre de transactions sur la dernière semaine"
+
+#: barman_stats/templates/barman_stats/stats.html:48
+msgid "Total of transactions during last week"
+msgstr "Total des transactions sur la dernière semaine"
+
+#: barman_stats/templates/barman_stats/stats.html:52
+msgid "Number of transactions during last month"
+msgstr "Numbre des transactions sur le dernier mois"
+
+#: barman_stats/templates/barman_stats/stats.html:56
+msgid "Total of transactions during last month"
+msgstr "Total des transactions sur le dernier mois"
+
+#: barman_stats/templates/barman_stats/stats.html:60
+msgid "Number of transactions during last year"
+msgstr "Nombre de transaction sur la dernière année"
+
+#: barman_stats/templates/barman_stats/stats.html:64
+msgid "Total of transactions during last year"
+msgstr "Total des transactions sur la dernière année"
+
+#: barman_stats/templates/barman_stats/stats.html:68
+msgid "Number of reloads"
+msgstr "Nombre de rechargements"
+
+#: barman_stats/templates/barman_stats/stats.html:72
+msgid "Total of reloads"
+msgstr "Total des rechargements"
+
+#: barman_stats/templates/barman_stats/stats.html:76
+msgid "Number of refunds"
+msgstr "Nombre de remboursements"
+
+#: barman_stats/templates/barman_stats/stats.html:80
+msgid "Total of refunds"
+msgstr "Total des remboursements"
+
+#: barman_stats/templates/barman_stats/stats.html:84
+msgid "Sum of balances"
+msgstr "Somme des soldes"
+
+#: barman_stats/templates/barman_stats/stats.html:88
+msgid "Best buyer"
+msgstr "Meilleur acheteur"
+
+#: barman_stats/templates/barman_stats/stats.html:93
+msgid "Best product"
+msgstr "Meilleur produit"
+
+#: barman_stats/templates/barman_stats/stats.html:97
+msgid "Number of schools"
+msgstr "Nombre d'écoles"
+
+#: barman_stats/templates/barman_stats/stats.html:101
+msgid "Number of groups"
+msgstr "Numbre de groupes"
+
+#: barman_stats/templates/barman_stats/stats.html:106
+#, python-format
+msgid "Number of people in the group %(group)s"
+msgstr "Nombre de personnes dans le goupe %(group)s"
+
+#: barman_stats/templates/barman_stats/stats.html:111
+msgid "Number of admins"
+msgstr "Nombre d'admins"
+
+#: barman_stats/templates/barman_stats/stats.html:115
+msgid "Number of superusers"
+msgstr "Nombre de super-utilisateurs"
+
+#: barman_stats/templates/barman_stats/stats.html:119
+msgid "Number of quotes"
+msgstr "Nombre de citations"
+
+#: barman_stats/templates/barman_stats/stats.html:123
+msgid "Number of categories"
+msgstr "Nombre de catégories"
+
+#: barman_stats/templates/barman_stats/stats.html:127
+msgid "Number of shown categories"
+msgstr "Nombre de catégories actives"
+
+#: barman_stats/templates/barman_stats/stats.html:131
+msgid "Number of products"
+msgstr "Nombre de produits"
+
+#: barman_stats/templates/barman_stats/stats.html:135
+msgid "Number of active products"
+msgstr "Nombre de produits actifs"
+
+#: barman_stats/templates/barman_stats/stats.html:139
+msgid "Number of active kegs"
+msgstr "Nombre de fûts actis"
+
+#: barman_stats/templates/barman_stats/stats.html:143
+msgid "Number of menus"
+msgstr "Nombre de menus"
+
+#: barman_stats/templates/barman_stats/stats.html:147
+msgid "Number of payment methods"
+msgstr "Nombre d emoyens de moyens de paiement"
+
+#: barman_stats/templates/barman_stats/stats.html:151
+msgid "Number of contributions types"
+msgstr "Nombre de types de cotisation"
+
+#: barman_stats/templates/barman_stats/stats.html:156
+#, python-format
+msgid "Number of %(contribution)s"
+msgstr "Nombre de %(contribution)s"
